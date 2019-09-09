@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+
+<channel>
+	<title>Google Cloud &#8211; Raspberry Pi Tanks</title>
+	<atom:link href="https://bondar-pavel.github.io/pitank-site/category/google-cloud/feed/" rel="self" type="application/rss+xml" />
+	<link>http://bondar-pavel.github.io/pitank-site/</link>
+	<description>Make your own tanks with Blackjack and ...</description>
+	<lastBuildDate>Sun, 17 Dec 2017 13:45:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.11</generator>
+<site xmlns="com-wordpress:feed-additions:1">88870125</site>	<item>
+		<title>Migrating WordPress from AWS to the Google Cloud</title>
+		<link>https://bondar-pavel.github.io/pitank-site/migrating-wordpress-google-cloud-aws/</link>
+		<comments>https://bondar-pavel.github.io/pitank-site/migrating-wordpress-google-cloud-aws/#respond</comments>
+		<pubDate>Sun, 04 Sep 2016 14:30:23 +0000</pubDate>
+		<dc:creator><![CDATA[apostal]]></dc:creator>
+				<category><![CDATA[Google Cloud]]></category>
+
+		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=231</guid>
+		<description><![CDATA[<p>&#160; I wanted to try out Google Cloud for a long time and now I have a good reason to do it. My AWS 1 year trial period is over, I used it to run my site pitank.com. It used wordpress and one instance with 1 Gb usually was enough for a low volume site [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/migrating-wordpress-google-cloud-aws/">Migrating WordPress from AWS to the Google Cloud</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>&nbsp;</p>
+<p><img class="wp-image-244 size-large aligncenter" src="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/09/cloud_platform_logo_square-767x768.jpg?resize=590%2C591&#038;ssl=1" alt="cloud_platform_logo_square" width="590" height="591" srcset="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/09/cloud_platform_logo_square.jpg?resize=767%2C768&amp;ssl=1 767w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/09/cloud_platform_logo_square.jpg?resize=113%2C113&amp;ssl=1 113w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/09/cloud_platform_logo_square.jpg?resize=225%2C225&amp;ssl=1 225w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/09/cloud_platform_logo_square.jpg?resize=768%2C769&amp;ssl=1 768w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/09/cloud_platform_logo_square.jpg?w=1300&amp;ssl=1 1300w, https://i2.wp.com/pitank.com/wp-content/uploads/2016/09/cloud_platform_logo_square.jpg?w=1180 1180w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></p>
+<p>I wanted to try out Google Cloud for a long time and now I have a good reason to do it. My AWS 1 year trial period is over, I used it to run my site pitank.com. It used wordpress and one instance with 1 Gb usually was enough for a low volume site like this. But this solution is not scalable: database and apache are run on the same node, wp data is stored on the system disk volume.</p>
+<p>When I started to look into Google Cloud I saw it was quite different from AWS. It is related to the pricing model and how instances are sold to you (Google gives you much better price if you take instance for a long period of time).</p>
+<h2>Migrating WordPress from AWS to Google Cloud: Simple Way</h2>
+<p>If you want to create new a single-node wordress installation you can easily do it in a few clicks using Pre-Built Software Packages. Here is a nice step-by-step instruction to deploy single-node wordpress:</p>
+<p>http://www.wpexplorer.com/install-wordpress-google-cloud/</p>
+<p>Even if you migrate from the existing wordpress you can export all data (posts, comments, images) from your current WP to a fresh one. To do it:</p>
+<ol>
+<li>Log in to your $old_site/wp-admin/</li>
+<li>Go to Tools-&gt;Export.</li>
+<li>&#8220;Choose what to export&#8221; -&gt; All content</li>
+<li>Press &#8220;Download Export File&#8221;</li>
+<li>Then log in into you new wordpress installation $new_site/wp-admin/</li>
+<li>Go to Tools-&gt;Import.</li>
+<li>Choose WordPress.</li>
+<li>Then press &#8220;Install Now&#8221; to install &#8220;WordPress Importer&#8221;</li>
+<li>After that you will be able to import file with content you have previously downloaded from $old_sile</li>
+</ol>
+<p>Using this way you import all the content from your old site, but all the plugins and custom theme changes and settings are not imported. So you will have to spend some time to make your new installation to look and feel exactly the same as your old version.</p>
+<h2>Is all-in-one WordPress installation really scalable?</h2>
+<p>The issue with this way is that you get the same all-in-one installation. You can scale it only by making your instance bigger, For Compute Engine you can scale your instance from 1 vCPU and 0.6 Gb of RAM to 32 vCPU and 120GB of RAM. Well that is probably enough for 99% of WordPress blogs in terms of computing power. But it has following disadvantages:</p>
+<ol>
+<li>Scaling up and down is possible only when the instance is stopped. It is typically manual operation and leads to downtime during the change. And it is really far from what you can call autoscalable.</li>
+<li>Your instance is a single point of failure. Well it is not easy to get rid of a single point of failure while deploying your applications, but we can probably do several steps in that direction.</li>
+<li>We don&#8217;t use any benefits of truly cloud applications with a current design. Cloud applications (Google Bucket Storage, Cloud SQL) are highly reliable and autoscalable by design,</li>
+</ol>
+<p>So I decided to migrate to Google Cloud infrastructure and tried to make my WordPress a bit more ready to become scalable.</p>
+<p>The ultimate goal is to decompose static content from dynamic content and scale them separately.</p>
+<h2>How to make WordPress more scalable?</h2>
+<p>To achieve scalability you need to solve at least several problems:</p>
+<ol>
+<li>WordPress database should be decomposed from other web services (apache/php). So it should be scaled independently from other pieces, and there should be a single entry point to database.</li>
+<li>Wp-content (all uploadable content) ideally have to be moved to the cloud storage.</li>
+</ol>
+<h2>Cloud SQL</h2>
+<p>To solve problem [1] Google has a Cloud SQL. Cloud SQL is a MySQL database that lives in Google&#8217;s cloud. It hugely simplifies SQL sever management, makes it reliable, secure and easily configurable. You don&#8217;t need to manage it over ssh, all DB related operations like import/export data, configuring regular backups and enabling binary logging (for point-in-time recovery and replication) can be done from Google Cloud Platform UI.</p>
+<p><iframe class='youtube-player' type='text/html' width='590' height='332' src='http://www.youtube.com/embed/qkqnNVk9jEU?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
+<p>The feature I like about Cloud SQL is &#8220;Enable automatic storage increase&#8221;.&#8221;Adds storage capacity whenever space is low. Up to 25 GB per increase. All increases are permanent. <a href="https://cloud.google.com/sql/docs/instance-settings?hl=en_US#automatic-storage-increase-2ndgen" target="_blank">Learn more</a>&#8220;. No need to extend your volume manually, login to the instance, run fdisk to resize the partition to make FS aware of the disk increase. No more Pain. Awesome!</p>
+<p>To connect Cloud SQL with WordPress you need to use cloud_sql_proxy.</p>
+<p>I followed <a href="https://cloud.google.com/sql/docs/mysql-connect-proxy">this official Google Guide</a> to set up and configure cloud_sql_proxy. Once you are done with that, you need to configure WordPress to use cloud_sql_proxy instead of local mysql. It is as simple as changing one line in your wp-config.php:</p>
+<pre style="text-align: justify;"> define('DB_HOST', ':/cloudsql/$project:$region:$cloud_sql_name')</pre>
+<p>Make sure to replace variables $project, $region, $cloud_sql_name with your project, region and cloud sql instance name. At this point connection between wordpress and cloud sql should work fine.</p>
+<h2>Starting Cloud SQL Proxy at boot time</h2>
+<p>To establish connection from the local machine to cloud sql you had to execute cloud_sql_proxy manually from the shell. Obviously, after reboot you will have to do it manually again. To automate connecting  cloud_sql_proxy to the cloud sql instance you can write a simple script. Debian/Ubunty images in Google Cloud use systemd as service manager, so let&#8217;s write systemd unit to do the job.</p>
+<p>Create service file &#8220;/usr/lib/systemd/system/cloud_sql.service&#8221; with the following content:</p>
+<pre>[Unit]
+Description=Cloud SQL Proxy
+After=network.target
+
+[Service]
+ExecStart=/$path_to_cloud_proxy/cloud_sql_proxy -dir=/cloudsql -instances=$project:$region:$cloud_sql_name
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target</pre>
+<p>It will be responsible for starting Cloud SQL Proxy and restarting it if dies. Just don&#8217;t forget to update path to the cloud_sql_proxy and parameters to reach cloud sql instance (project, region, instance-name).</p>
+<p>Run the following commands to enable autostarting cloud_sql_proxy:</p>
+<pre>sudo systemctl daemon-reload
+sudo systemctl enable cloud_sql.service</pre>
+<h2>WP-Stateless</h2>
+<p>To solve the problem [2] you can use <a href="https://ru.wordpress.org/plugins/wp-stateless/installation/">wp-stateless</a> plugin for the WordPress. The WP-Stateless plugin copies your media uploads to Google Cloud Storage in real-time as you add items to your Media Library. The uploaded files are then served directly from the Google bucket, making your media files load quicker from the distributed Google servers. The plugin will handle all media uploads including image thumbnails, PDF documents, audio files, and more.</p>
+<p><iframe class='youtube-player' type='text/html' width='590' height='332' src='http://www.youtube.com/embed/aGntFnKwkE0?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
+<p>What is great about WP-Stateless plugin is that you offload all your media to Google Cloud Storage, which is autoscalable by design and helps your site to work faster. Also it means you need smaller instance to serve your site, since part of the work is already served by Google Cloud Storage.</p>
+<h2>Conclusion</h2>
+<p>Google Cloud technologies like Cloud Storage and Cloud SQL helps to improve your site reliability, speed and simplicity of control/backup. This post just briefly describes what possibilities exist to use cloud power and in future post I plan to describe each option with more details.</p>
+<p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/migrating-wordpress-google-cloud-aws/">Migrating WordPress from AWS to the Google Cloud</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/migrating-wordpress-google-cloud-aws/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">231</post-id>	</item>
+	</channel>
+</rss>
