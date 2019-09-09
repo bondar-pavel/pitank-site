@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+
+<channel>
+	<title>youtube &#8211; Raspberry Pi Tanks</title>
+	<atom:link href="https://bondar-pavel.github.io/pitank-site/tag/youtube/feed/" rel="self" type="application/rss+xml" />
+	<link>http://bondar-pavel.github.io/pitank-site/</link>
+	<description>Make your own tanks with Blackjack and ...</description>
+	<lastBuildDate>Sun, 17 Dec 2017 13:45:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.11</generator>
+<site xmlns="com-wordpress:feed-additions:1">88870125</site>	<item>
+		<title>Streaming cats via pitank</title>
+		<link>https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/</link>
+		<comments>https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/#respond</comments>
+		<pubDate>Fri, 12 Feb 2016 19:15:09 +0000</pubDate>
+		<dc:creator><![CDATA[apostal]]></dc:creator>
+				<category><![CDATA[PiTank]]></category>
+		<category><![CDATA[cats]]></category>
+		<category><![CDATA[pitank]]></category>
+		<category><![CDATA[raspberry pi]]></category>
+		<category><![CDATA[youtube]]></category>
+
+		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=197</guid>
+		<description><![CDATA[<p>Pitank could have a lot of practical usages.  But live is strange thing, so I basically use it to stream cat videos&#8230; When cat is left alone at home and I am somewhere far away, I just login to my pitank and start watching what is happening. Sometimes I stream it directly to youtube.  So [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/">Streaming cats via pitank</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Pitank could have a lot of practical usages.  But live is strange thing, so I basically use it to stream cat videos&#8230;</p>
+<p><img class="alignnone wp-image-199 size-full" src="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?resize=590%2C589&#038;ssl=1" alt="cat_stream" width="590" height="589" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?w=600&amp;ssl=1 600w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?resize=113%2C113&amp;ssl=1 113w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?resize=225%2C225&amp;ssl=1 225w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></p>
+<p>When cat is left alone at home and I am somewhere far away, I just login to my pitank and start watching what is happening.</p>
+<p>Sometimes I stream it directly to youtube.  So here is one of the first such streaming sessions:</p>
+<p><iframe class='youtube-player' type='text/html' width='590' height='332' src='http://www.youtube.com/embed/unOWf7p8nAo?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
+<p>By the way streaming to youtube from Raspberry pi is as simple as one line command:</p>
+<blockquote><p>raspivid -o &#8211; -t 0 -fps 30 -b 6000000 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f h264 -i &#8211; -vcodec copy -acodec aac -ab 128k -g 50 -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/your-streaming-key</p></blockquote>
+<p>raspivid sends video stream from picamera to sdtout, it is already encoded by h264. ffmpeg puts this video stream in flv container and sends to youtube. No video encoding/decoding  happens, so it works pretty good.  Also ffmpeg emulates sound track to make stream acceptable by youtube.</p>
+<p>raspvid should be available in all recent distributions suitable for Raspberry Pi. And ffmpeg is not present on some distributions, so compiling from binaries might be required.</p>
+<p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/">Streaming cats via pitank</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">197</post-id>	</item>
+	</channel>
+</rss>
