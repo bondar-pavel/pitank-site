@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+
+<channel>
+	<title>ec2 &#8211; Raspberry Pi Tanks</title>
+	<atom:link href="https://bondar-pavel.github.io/pitank-site/tag/ec2/feed/" rel="self" type="application/rss+xml" />
+	<link>http://bondar-pavel.github.io/pitank-site/</link>
+	<description>Make your own tanks with Blackjack and ...</description>
+	<lastBuildDate>Sun, 17 Dec 2017 13:45:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.11</generator>
+<site xmlns="com-wordpress:feed-additions:1">88870125</site>	<item>
+		<title>Moving into the cloud: PiTank is hosted on AWS!</title>
+		<link>https://bondar-pavel.github.io/pitank-site/pitank-on-aws/</link>
+		<comments>https://bondar-pavel.github.io/pitank-site/pitank-on-aws/#comments</comments>
+		<pubDate>Sat, 12 Sep 2015 20:11:05 +0000</pubDate>
+		<dc:creator><![CDATA[apostal]]></dc:creator>
+				<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[aws]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[ec2]]></category>
+
+		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=138</guid>
+		<description><![CDATA[<p>Glad to announce that pitank.com is now hosted on Amazon Web Services(AWS)! AWS Free Tire provides 1-year of Cloud Services at no charge. It has some limitations, but it is more than enough for your own blog on a wordpress. Also it gives nice expericence of using cloud and adopting it for your needs. AWS is nice for rapid scaling [&#8230;]</p>
+<p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/pitank-on-aws/">Moving into the cloud: PiTank is hosted on AWS!</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
+]]></description>
+				<content:encoded><![CDATA[<p><a href="https://aws.amazon.com/"><img class="alignnone" src="https://i2.wp.com/usedoor.jp/wp-content/uploads/2014/01/aws-thum-200x200.png.pagespeed.ce.HLomG4JrT0.png?resize=200%2C200" alt="" width="200" height="200" data-recalc-dims="1" /></a></p>
+<p>Glad to announce that <a href="http://bondar-pavel.github.io/pitank-site/">pitank.com</a> is now hosted on <a href="https://aws.amazon.com/">Amazon Web Services</a>(AWS)!</p>
+<p><a href="https://aws.amazon.com/free/">AWS Free Tire</a> provides 1-year of Cloud Services at no charge. It has some limitations, but it is more than enough for your own blog on a wordpress. Also it gives nice expericence of using cloud and adopting it for your needs. AWS is nice for rapid scaling your application and introducing new serviceses.</p>
+<p>Migration from a previous server to AWS is relatively easy to do. Clicking create_instance-&gt;next-&gt;next works fine here, but you don&#8217;t know much about AWS infrastucture, billing and so on at this point. So decidions you make during initial migration is not the best (at least for me it is completely true).</p>
+<p>During the initial migration I did two not optimal decisions, that took about one week to correct them in a proper way:</p>
+<ol>
+<li>By default my EC2 server was allocated from Oregon location, so I proceed with the migration there. Everything was fine except one thing: ping. It took 200ms just to ping my server. I did it from Belarus, so each time I accessed it, packets had to travel over the ocean and it took a while. Solution was to migrate the instance to Europe. So now I have 50ms ping to the server and I am pretty satisfied with it.</li>
+<li>I found that <a href="https://aws.amazon.com/free/">Free Tier</a> allowed to use up to 30 Gb Volume*month, so I created one of such size for my EC2 instance. My drive usage was about ~2Gb. But I created a big drive just to make sure that there would be no need to extend it in the future. And as you can see it was wrong. Amazon charges not for the actual space you are using on the drive, but for the entire drive(volume) size. And during migrations you create additional temporary volumes, that can easily kick you out of the free tier limits, so you get into a paid area in this case. So it is much better to create volumes with a size not much bigger than you actually need. But what to do if you already have an instance with 30Gb? Start over? No. You can shrink the volume of your drive to some smaller size. Even if there is no tool for doing that from AWS UI, it is still possible. I followed two or tree instuctions, but they didn&#8217;t work for me (instance could boot after shrinking). So I came up with my own way of shrinking volumes on AWS.</li>
+</ol>
+<p>Vote in comments if you want to see more details as a post about how [1] or [2] were resolved.</p>
+<p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/pitank-on-aws/">Moving into the cloud: PiTank is hosted on AWS!</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/pitank-on-aws/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">138</post-id>	</item>
+	</channel>
+</rss>
