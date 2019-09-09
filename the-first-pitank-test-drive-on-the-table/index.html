@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        
+        
+        <title>The first PiTank test drive on the table - Raspberry Pi Tanks</title>
+
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The first PiTank test drive on the table - Raspberry Pi Tanks">
+<meta property="og:description" content="It was probably the first PiTank test drive filmed on the camera. It had no camera built on top of pi, and no cool WebUI interface, only console, only hardcore. But base functionality already works. Raspberry Pi receives commands via wi-fi and connected to Tank hardware using GPIO. Perl script is used to read key …">
+<meta property="og:url" content="https://bondar-pavel.github.io/pitank-site/the-first-pitank-test-drive-on-the-table/">
+<meta property="og:site_name" content="Raspberry Pi Tanks">
+<meta property="article:tag" content="pita">
+<meta property="article:tag" content="RaspberryPi">
+<meta property="article:section" content="PiTank">
+<meta property="article:published_time" content="2015-04-02T21:56:24+00:00">
+<meta property="article:modified_time" content="2015-07-22T07:45:55+00:00">
+<meta property="og:updated_time" content="2015-07-22T07:45:55+00:00">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://bondar-pavel.github.io/pitank-site/#website","url":"https://bondar-pavel.github.io/pitank-site/","name":"Raspberry Pi Tanks","publisher":{"@id":"https://bondar-pavel.github.io/pitank-site/#person"},"potentialAction":{"@type":"SearchAction","target":"https://bondar-pavel.github.io/pitank-site/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://bondar-pavel.github.io/pitank-site/the-first-pitank-test-drive-on-the-table/#webpage","url":"https://bondar-pavel.github.io/pitank-site/the-first-pitank-test-drive-on-the-table/","inLanguage":"en-US","name":"The first PiTank test drive on the table - Raspberry Pi Tanks","isPartOf":{"@id":"https://bondar-pavel.github.io/pitank-site/#website"},"datePublished":"2015-04-02T21:56:24+00:00","dateModified":"2015-07-22T07:45:55+00:00"},{"@type":"Article","@id":"https://bondar-pavel.github.io/pitank-site/the-first-pitank-test-drive-on-the-table/#article","isPartOf":{"@id":"https://bondar-pavel.github.io/pitank-site/the-first-pitank-test-drive-on-the-table/#webpage"},"author":{"@id":"https://bondar-pavel.github.io/pitank-site/author/apostal/#author","name":"apostal"},"publisher":{"@id":"https://bondar-pavel.github.io/pitank-site/#person"},"headline":"The first PiTank test drive on the table","datePublished":"2015-04-02T21:56:24+00:00","dateModified":"2015-07-22T07:45:55+00:00","commentCount":0,"mainEntityOfPage":"https://bondar-pavel.github.io/pitank-site/the-first-pitank-test-drive-on-the-table/#webpage","keywords":"pita,RaspberryPi","articleSection":"PiTank"},{"@type":"Person","@id":"https://bondar-pavel.github.io/pitank-site/author/apostal/#author","name":"apostal","image":{"@type":"ImageObject","@id":"https://bondar-pavel.github.io/pitank-site/#personlogo","url":"http://1.gravatar.com/avatar/dc295fa59331c9b7561f0760c780497c?s=96&d=mm&r=g","caption":"apostal"},"sameAs":[]}]}</script>
+
+
+<link rel="dns-prefetch" href="//s0.wp.com">
+<link rel="dns-prefetch" href="//secure.gravatar.com">
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+
+
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.7.1';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-61667736-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-61667736-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+
+<link rel="stylesheet" id="dashicons-css" href="https://bondar-pavel.github.io/pitank-site/wp-includes/css/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="stylesheet-css" href="https://bondar-pavel.github.io/pitank-site/wp-content/themes/compass/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="compass_Animate_Css-css" href="https://bondar-pavel.github.io/pitank-site/wp-content/themes/compass/css/animate.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack-widget-social-icons-styles-css" href="https://bondar-pavel.github.io/pitank-site/wp-content/plugins/jetpack/modules/widgets/social-icons/social-icons.css" type="text/css" media="all">
+<link rel="stylesheet" id="sedlex_styles-css" href="https://bondar-pavel.github.io/pitank-site/wp-content/sedlex/inline_styles/49df0c5c59b86b32e917f8be566aa2ba2dcc2644.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="https://bondar-pavel.github.io/pitank-site/wp-content/plugins/jetpack/css/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/PLACEHOLDER.wpsho","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js"></script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/themes/compass/js/superfish.js"></script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/themes/compass/js/modernizr.custom.79639.js"></script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/themes/compass/js/jquery.ba-cond.min.js"></script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/themes/compass/js/jquery.slitslider.js"></script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/themes/compass/js/menu/jquery.meanmenu.2.0.min.js"></script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/themes/compass/js/menu/jquery.meanmenu.options.js"></script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/themes/compass/js/custom.js"></script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/sedlex/inline_scripts/4139b9ad7b935834d8d31961702681728a5a530a.js"></script>
+
+
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1829622373126724",
+    enable_page_level_ads: true
+  });
+</script>
+<link rel="dns-prefetch" href="//v0.wordpress.com">
+<link rel="dns-prefetch" href="//i0.wp.com">
+<link rel="dns-prefetch" href="//i1.wp.com">
+<link rel="dns-prefetch" href="//i2.wp.com">
+<style type="text/css">img#wpstats{display:none}</style>        <link rel="shortcut icon" href="https://bondar-pavel.github.io/pitank-site/wp-content/themes/compass/images/favicon.ico">
+            </head>
+    <body class="post-template-default single single-post postid-18 single-format-standard compass_theme">
+        <div class="container_24">
+            <div class="grid_24">
+                <div class="page_content_wrapper">
+                    <div class="header">
+                        <div class="grid_8 alpha">
+                            <div class="logo">
+                                <a href="https://bondar-pavel.github.io/pitank-site"><img src="https://bondar-pavel.github.io/pitank-site/wp-content/uploads/2015/04/pitank1.jpg" alt="Raspberry Pi Tanks logo"></a>
+                            </div> 
+                        </div>
+                        <div class="grid_16 omega">            
+                            <div class="menu_wrapper">
+                                <div id="MainNav">
+                                        <div id="menu">
+        <ul class="sf-menu">
+    <li><a href="https://bondar-pavel.github.io/pitank-site/">Home</a></li><li class="page_item page-item-2"><a href="https://bondar-pavel.github.io/pitank-site/raspberry-pi-tank-info/">Raspberry Pi Tank Project: PiTank Info</a></li>
+        </ul>
+    </div>
+                           
+                                </div>
+                            </div>
+                        </div>       
+                        <div class="clear"></div>		  
+                    </div><div class="clear"></div>
+<div class="page_content">
+    <div class="heading_container">
+        <p id="crumbs"><a href="https://bondar-pavel.github.io/pitank-site">Home</a> » <a href="https://bondar-pavel.github.io/pitank-site/category/pitank/">PiTank</a> » <span class="current">The first PiTank test drive on the table</span></p>    </div>
+    <div class="grid_17 alpha">
+        <div class="content_bar">
+            
+                                
+                    <div class="post single">			
+                        <h1 class="post_title">The first PiTank test drive on the table</h1>
+                        <ul class="post_meta">
+                            <li class="posted_by"><span><i class="fa fa-user hi-icon"></i></span><a href="https://bondar-pavel.github.io/pitank-site/author/apostal/" title="Posts by apostal" rel="author">apostal</a></li>
+                            <li class="posted_in"><span><i class="fa fa-bookmark hi-icon"></i></span><a href="https://bondar-pavel.github.io/pitank-site/category/pitank/" rel="category tag">PiTank</a></li>
+                            <li class="post_date"><span><i class="fa fa-clock-o hi-icon"></i></span>Apr, 02, 2015</li>
+                            <li class="postc_comment"><span><i class="fa fa-comments hi-icon"></i></span><a href="https://bondar-pavel.github.io/pitank-site/the-first-pitank-test-drive-on-the-table/#respond">No Comments</a></li>
+                        </ul>
+                        <div class="post_content"> 
+                            <p>It was probably the first PiTank test drive filmed on the camera. It had no camera built on top of pi, and no cool WebUI interface, only console, only hardcore. But base functionality already works.<br>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="590" height="332" src="http://www.youtube.com/embed/85wECWODX2Q?version=3&rel=1&fs=1&autohide=2&showsearch=0&showinfo=1&iv_load_policy=1&wmode=transparent" allowfullscreen="true" style="border:0;"></iframe></span><br>
+Raspberry Pi receives commands via wi-fi and connected to Tank hardware using GPIO.<br>
+Perl script is used to read key presses and send right commands to GPIO. Controls are ‘W’ ‘A’ ‘S’ ‘D’ for movement and ‘[‘ ‘]’ for moving tower left and right. </p>
+                        </div>				
+                                                    <div class="tags_write">
+                                Post Tag With :<a href="https://bondar-pavel.github.io/pitank-site/tag/pita/" rel="tag">pita</a> ,<a href="https://bondar-pavel.github.io/pitank-site/tag/raspberry_pi/" rel="tag">RaspberryPi</a>                            </div>
+                        				
+                    </div>
+                            
+            	
+            <div class="clear"></div>
+            <nav id="nav-single"> <span class="nav-previous">
+                    « <a href="https://bondar-pavel.github.io/pitank-site/opened-since-april-1-2015/" rel="prev">Opened since April 1 2015</a>                </span> <span class="nav-next">
+<a href="https://bondar-pavel.github.io/pitank-site/pitank-test-drive-with-camera-and-webui/" rel="next">PiTank test drive with camera and webUI</a> »                </span> </nav>
+            
+
+<div id="commentsbox">
+                        
+        	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/the-first-pitank-test-drive-on-the-table/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://bondar-pavel.github.io/pitank-site/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="18" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="103fd367b8"></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="94"></p>			</form>
+			</div>
+	</div>
+            
+        </div>
+    </div>
+    <div class="grid_7 sidebar_grid omega">
+        
+<div class="sidebar">
+    <div class="sidebar_widget"><h3><span class="line"></span>Tags</h3><div class="tagcloud"><a href="https://bondar-pavel.github.io/pitank-site/tag/aws/" class="tag-cloud-link tag-link-21 tag-link-position-1" style="font-size: 8pt;" aria-label="aws (1 item)">aws</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/bcm2836/" class="tag-cloud-link tag-link-6 tag-link-position-2" style="font-size: 8pt;" aria-label="BCM2836 (1 item)">BCM2836</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/blog/" class="tag-cloud-link tag-link-15 tag-link-position-3" style="font-size: 12.581818181818pt;" aria-label="blog (2 items)">blog</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/cat/" class="tag-cloud-link tag-link-34 tag-link-position-4" style="font-size: 8pt;" aria-label="cat (1 item)">cat</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/cats/" class="tag-cloud-link tag-link-25 tag-link-position-5" style="font-size: 18.181818181818pt;" aria-label="cats (4 items)">cats</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/cloud/" class="tag-cloud-link tag-link-22 tag-link-position-6" style="font-size: 8pt;" aria-label="cloud (1 item)">cloud</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/design/" class="tag-cloud-link tag-link-14 tag-link-position-7" style="font-size: 8pt;" aria-label="design (1 item)">design</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/drone/" class="tag-cloud-link tag-link-20 tag-link-position-8" style="font-size: 8pt;" aria-label="drone (1 item)">drone</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/ec2/" class="tag-cloud-link tag-link-23 tag-link-position-9" style="font-size: 8pt;" aria-label="ec2 (1 item)">ec2</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/gopro/" class="tag-cloud-link tag-link-24 tag-link-position-10" style="font-size: 8pt;" aria-label="gopro (1 item)">gopro</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/minsk/" class="tag-cloud-link tag-link-29 tag-link-position-11" style="font-size: 8pt;" aria-label="Minsk (1 item)">Minsk</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/mjpg-streamer/" class="tag-cloud-link tag-link-10 tag-link-position-12" style="font-size: 8pt;" aria-label="mjpg-streamer (1 item)">mjpg-streamer</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/outdoor/" class="tag-cloud-link tag-link-26 tag-link-position-13" style="font-size: 8pt;" aria-label="outdoor (1 item)">outdoor</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/pita/" class="tag-cloud-link tag-link-12 tag-link-position-14" style="font-size: 8pt;" aria-label="pita (1 item)">pita</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/pitank/" class="tag-cloud-link tag-link-7 tag-link-position-15" style="font-size: 22pt;" aria-label="pitank (6 items)">pitank</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/quadrocopter/" class="tag-cloud-link tag-link-19 tag-link-position-16" style="font-size: 12.581818181818pt;" aria-label="quadrocopter (2 items)">quadrocopter</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/rack/" class="tag-cloud-link tag-link-11 tag-link-position-17" style="font-size: 8pt;" aria-label="rack (1 item)">rack</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/raspberry_pi/" class="tag-cloud-link tag-link-2 tag-link-position-18" style="font-size: 18.181818181818pt;" aria-label="RaspberryPi (4 items)">RaspberryPi</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/raspberry-pi/" class="tag-cloud-link tag-link-31 tag-link-position-19" style="font-size: 15.636363636364pt;" aria-label="raspberry pi (3 items)">raspberry pi</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/raspberry_pi_2/" class="tag-cloud-link tag-link-3 tag-link-position-20" style="font-size: 8pt;" aria-label="RaspberryPi2 (1 item)">RaspberryPi2</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/raspberry-pi-3/" class="tag-cloud-link tag-link-32 tag-link-position-21" style="font-size: 8pt;" aria-label="raspberry pi 3 (1 item)">raspberry pi 3</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/raspberrypimodelb/" class="tag-cloud-link tag-link-8 tag-link-position-22" style="font-size: 8pt;" aria-label="RaspberryPimodelB+ (1 item)">RaspberryPimodelB+</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/tank/" class="tag-cloud-link tag-link-35 tag-link-position-23" style="font-size: 8pt;" aria-label="tank (1 item)">tank</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/testdrive/" class="tag-cloud-link tag-link-27 tag-link-position-24" style="font-size: 8pt;" aria-label="testdrive (1 item)">testdrive</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/test-drive/" class="tag-cloud-link tag-link-28 tag-link-position-25" style="font-size: 8pt;" aria-label="test drive (1 item)">test drive</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/v262/" class="tag-cloud-link tag-link-18 tag-link-position-26" style="font-size: 12.581818181818pt;" aria-label="V262 (2 items)">V262</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/webui/" class="tag-cloud-link tag-link-9 tag-link-position-27" style="font-size: 8pt;" aria-label="webui (1 item)">webui</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/wi-fi/" class="tag-cloud-link tag-link-33 tag-link-position-28" style="font-size: 8pt;" aria-label="wi-fi (1 item)">wi-fi</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/wltoys/" class="tag-cloud-link tag-link-17 tag-link-position-29" style="font-size: 12.581818181818pt;" aria-label="WLToys (2 items)">WLToys</a>
+<a href="https://bondar-pavel.github.io/pitank-site/tag/youtube/" class="tag-cloud-link tag-link-30 tag-link-position-30" style="font-size: 8pt;" aria-label="youtube (1 item)">youtube</a></div>
+</div><div class="sidebar_widget"><h3><span class="line"></span>Categories</h3>		<ul>
+	<li class="cat-item cat-item-13"><a href="https://bondar-pavel.github.io/pitank-site/category/announcements/" title="Any announcements related to blog or events">Announcements</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="https://bondar-pavel.github.io/pitank-site/category/drone/">Drone</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://bondar-pavel.github.io/pitank-site/category/google-cloud/">Google Cloud</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://bondar-pavel.github.io/pitank-site/category/pitank/" title="PiTank - remotely controlled tank, built using Raspberry Pi">PiTank</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://bondar-pavel.github.io/pitank-site/category/raspberry-pi/" title="All about Raspberry Pi hardware and software.">Raspberry Pi</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://bondar-pavel.github.io/pitank-site/category/uncategorized/">Uncategorized</a>
+</li>
+		</ul>
+</div><div class="sidebar_widget"><h3><span class="line"></span>Google AdSense</h3>			<div class="textwidget"><p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<br>
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-1829622373126724" data-ad-slot="2115043298"></ins><br>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+</div>
+		</div>      
+</div>        
+    </div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+    </div>
+<div class="clear"></div>
+<div class="bottom_footer_content">
+    <div class="grid_16 alpha">         
+        <div class="copyrightinfo">
+            <p class="copyright"><a href="http://wordpress.org/" rel="generator">Powered by WordPress</a>
+                <span class="sep"> | </span>
+                Compass by <a href="http://inkthemes.com" rel="designer">InkThemes</a>.</p>
+        </div>
+    </div>
+    <div class="grid_8 omega">
+        <ul class="social_logos">			
+              
+
+        </ul>  
+    </div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+	<div style="display:none">
+	</div>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js"></script>
+<script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201937"></script>
+<script type="text/javascript" src="https://secure.gravatar.com/js/gprofiles.js?ver=2019Sepaa"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/plugins/jetpack/modules/wpgroho.js"></script>
+<script async="async" type="text/javascript" src="https://bondar-pavel.github.io/pitank-site/wp-content/plugins/akismet/_inc/form.js"></script>
+<script type="text/javascript" src="https://stats.wp.com/e-201937.js" async="async" defer></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:6.4.2',blog:'88870125',post:'18',tz:'0',srv:'pitank.com'} ]);
+	_stq.push([ 'clickTrackerInit', '88870125', '18' ]);
+</script>
+</body>
+</html>
