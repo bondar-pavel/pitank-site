@@ -5,106 +5,189 @@
 	xmlns:atom="http://www.w3.org/2005/Atom"
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-	xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
 
 <channel>
 	<title>pitank &#8211; Raspberry Pi Tanks</title>
 	<atom:link href="https://bondar-pavel.github.io/pitank-site/tag/pitank/feed/" rel="self" type="application/rss+xml" />
 	<link>http://bondar-pavel.github.io/pitank-site/</link>
-	<description>Make your own tanks with Blackjack and ...</description>
-	<lastBuildDate>Sun, 17 Dec 2017 13:45:46 +0000</lastBuildDate>
+	<description></description>
+	<lastBuildDate>Fri, 08 Jan 2021 10:30:26 +0000</lastBuildDate>
 	<language>en-US</language>
-	<sy:updatePeriod>hourly</sy:updatePeriod>
-	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.9.11</generator>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.6</generator>
+
+<image>
+	<url>https://i2.wp.com/storage.googleapis.com/wp-context/upload/2021/01/cropped-tank_wide_new_2-2.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>pitank &#8211; Raspberry Pi Tanks</title>
+	<link>http://bondar-pavel.github.io/pitank-site/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
 <site xmlns="com-wordpress:feed-additions:1">88870125</site>	<item>
+		<title>Pitank remote control over the internet</title>
+		<link>https://bondar-pavel.github.io/pitank-site/pitank-remote-control-internet/</link>
+					<comments>https://bondar-pavel.github.io/pitank-site/pitank-remote-control-internet/#respond</comments>
+		
+		<dc:creator><![CDATA[apostal]]></dc:creator>
+		<pubDate>Sun, 17 Dec 2017 13:45:46 +0000</pubDate>
+				<category><![CDATA[PiTank]]></category>
+		<category><![CDATA[pitank]]></category>
+		<category><![CDATA[RaspberryPi]]></category>
+		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=259</guid>
+
+					<description><![CDATA[<p>For a long time PiTank was working as a dust collector on the shelf, but now he is back! So</p>
+<p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/pitank-remote-control-internet/">Pitank remote control over the internet</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>For a long time PiTank was working as a dust collector on the shelf, but now he is back!</p>
+<p><img loading="lazy" class="size-large wp-image-260" src="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2017/12/G0040328-1024x768.jpg?resize=590%2C443&#038;ssl=1" alt="" width="590" height="443" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2017/12/G0040328.jpg?resize=1024%2C768&amp;ssl=1 1024w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2017/12/G0040328.jpg?resize=150%2C113&amp;ssl=1 150w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2017/12/G0040328.jpg?resize=300%2C225&amp;ssl=1 300w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2017/12/G0040328.jpg?resize=768%2C576&amp;ssl=1 768w, https://i0.wp.com/pitank.com/wp-content/uploads/2017/12/G0040328.jpg?w=1600 1600w, https://i0.wp.com/pitank.com/wp-content/uploads/2017/12/G0040328.jpg?w=2400 2400w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></p>
+<p>So what&#8217;s new today about PiTank?</p>
+<p>I have cleaned up from dust, fixed some bugs in environment, set up VM for remote control and added new GPIO backend(<a href="https://github.com/bondar-pavel/rpi-tank/commit/129e4810c4cf5e12e2f1b09792a0f1011f2d5bdd">commit</a>) to rpi-tank repo. And now all pieces finally works: video streaming, webui for remote control, VM for port forwarding and controlling GPIO pins.</p>
+<p>So basically you can drive PiTank remotely now, from any place on the globe. Just type in the browser http://stream.pitank.com:3000 and drive tank that is located in my kitchen.</p>
+<p>On this page you can find video stream from tank camera and buttons to control it. Check out how it works in realtime by watching the video below:</p>
+<p><iframe class='youtube-player' width='800' height='450' src='https://www.youtube.com/embed/Kmk956x0gfM?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en-US&#038;autohide=2&#038;wmode=transparent' allowfullscreen='true' style='border:0;' sandbox='allow-scripts allow-same-origin allow-popups allow-presentation'></iframe></p>
+<p>Most likely this page&nbsp;http://stream.pitank.com:3000 will not be available for you because, it just a debug version for now. But in future I plan to implement more production version the stream page, where multiple persons will be able to get timeslot to drive PiTank remotely.</p>
+<p>Will keep you posted about the progress!</p>
+<p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/pitank-remote-control-internet/">Pitank remote control over the internet</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/pitank-remote-control-internet/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">259</post-id>	</item>
+		<item>
 		<title>Debugging PiTank with cat</title>
 		<link>https://bondar-pavel.github.io/pitank-site/debugging-pitank-cat/</link>
-		<comments>https://bondar-pavel.github.io/pitank-site/debugging-pitank-cat/#respond</comments>
-		<pubDate>Tue, 03 May 2016 19:02:37 +0000</pubDate>
+					<comments>https://bondar-pavel.github.io/pitank-site/debugging-pitank-cat/#respond</comments>
+		
 		<dc:creator><![CDATA[apostal]]></dc:creator>
+		<pubDate>Tue, 03 May 2016 19:02:37 +0000</pubDate>
 				<category><![CDATA[PiTank]]></category>
 		<category><![CDATA[cat]]></category>
 		<category><![CDATA[cats]]></category>
 		<category><![CDATA[pitank]]></category>
 		<category><![CDATA[raspberry pi]]></category>
 		<category><![CDATA[tank]]></category>
-
 		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=216</guid>
-		<description><![CDATA[<p>My PiTank was collecting dust under the table for a while and today I got some free time to bring it back to life. There were some issues with connecting over ssh, so I connected it to my desktop monitor with hdmi cable and start debugging. When I got all services up and running cat&#8217;s attention was attracted by [&#8230;]</p>
+
+					<description><![CDATA[<p>My PiTank was collecting dust&#160;under the table for a while and today I&#160;got some free time to bring it back</p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/debugging-pitank-cat/">Debugging PiTank with cat</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></description>
-				<content:encoded><![CDATA[<p><img class="alignnone wp-image-219 size-full" title="Cat and PiTank" src="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/kitty_and_pittank.jpg?resize=590%2C590&#038;ssl=1" alt="kitty_and_pittank" width="590" height="590" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/kitty_and_pittank.jpg?w=995&amp;ssl=1 995w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/kitty_and_pittank.jpg?resize=113%2C113&amp;ssl=1 113w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/kitty_and_pittank.jpg?resize=225%2C225&amp;ssl=1 225w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/kitty_and_pittank.jpg?resize=768%2C768&amp;ssl=1 768w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></p>
-<p>My PiTank was collecting dust under the table for a while and today I got some free time to bring it back to life. There were some issues with connecting over ssh, so I connected it to my desktop monitor with hdmi cable and start debugging. When I got all services up and running cat&#8217;s attention was attracted by tank and I just started to record what happened.</p>
-<p><img class="alignnone wp-image-218 size-full" title="Cat tries to hit PiTank" src="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?resize=590%2C522&#038;ssl=1" alt="Cat_attack_tank_part2" width="590" height="522" srcset="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?w=1150&amp;ssl=1 1150w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?resize=128%2C113&amp;ssl=1 128w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?resize=254%2C225&amp;ssl=1 254w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?resize=768%2C680&amp;ssl=1 768w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?resize=868%2C768&amp;ssl=1 868w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></p>
-<p>By the way, since last videos PiTank was upgraded and you can see now bluetooth speaker on the back of PiTank. It is connected using 3.5&#8243; jack to Raspberry Pi analog output and can be used to reproduce different sounds or just play music. For now I just run &#8216;espeak&#8217; with some text, so it reads text from console.</p>
-<p>Full video with my cat and PiTank is available on YouTube:</p>
-<p><iframe class='youtube-player' type='text/html' width='590' height='332' src='http://www.youtube.com/embed/1ugilfUDL7w?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
+										<content:encoded><![CDATA[<p><img loading="lazy" class="alignnone wp-image-219 size-full" title="Cat and PiTank" src="https://i0.wp.com/pitank.com/wp-content/uploads/2016/05/kitty_and_pittank.jpg?resize=800%2C800" alt="kitty_and_pittank" width="800" height="800" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/kitty_and_pittank.jpg?w=995&amp;ssl=1 995w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/kitty_and_pittank.jpg?resize=113%2C113&amp;ssl=1 113w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/kitty_and_pittank.jpg?resize=225%2C225&amp;ssl=1 225w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/kitty_and_pittank.jpg?resize=768%2C768&amp;ssl=1 768w" sizes="(max-width: 800px) 100vw, 800px" data-recalc-dims="1" /></p>
+<p>My PiTank was collecting dust&nbsp;under the table for a while and today I&nbsp;got some free time to bring it back to life. There were some issues with connecting over ssh, so I connected it to my desktop monitor&nbsp;with hdmi cable and start debugging.&nbsp;When I got all services up and running cat&#8217;s attention was attracted by tank and I just started to record what happened.</p>
+<p><img loading="lazy" class="alignnone wp-image-218 size-full" title="Cat tries to hit PiTank" src="https://i2.wp.com/pitank.com/wp-content/uploads/2016/05/Cat_attack_tank_part2.jpg?resize=800%2C708" alt="Cat_attack_tank_part2" width="800" height="708" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?w=1150&amp;ssl=1 1150w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?resize=128%2C113&amp;ssl=1 128w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?resize=254%2C225&amp;ssl=1 254w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?resize=768%2C680&amp;ssl=1 768w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank_part2.jpg?resize=868%2C768&amp;ssl=1 868w" sizes="(max-width: 800px) 100vw, 800px" data-recalc-dims="1" /></p>
+<p>By the way, since last videos PiTank was upgraded and you can see now bluetooth speaker&nbsp;on the back of PiTank. It is connected using 3.5&#8243; jack to Raspberry Pi analog output and can be used to reproduce&nbsp;different sounds or just play music. For now I just run &#8216;espeak&#8217; with some text, so it reads text from console.</p>
+<p>Full video with&nbsp;my cat and&nbsp;PiTank is available on YouTube:</p>
+<p><iframe class='youtube-player' width='800' height='450' src='https://www.youtube.com/embed/1ugilfUDL7w?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en-US&#038;autohide=2&#038;wmode=transparent' allowfullscreen='true' style='border:0;' sandbox='allow-scripts allow-same-origin allow-popups allow-presentation'></iframe></p>
 <p>The end!</p>
-<p><img class="alignnone size-full wp-image-217" src="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank.jpg?resize=590%2C590&#038;ssl=1" alt="Cat_attack_tank" width="590" height="590" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank.jpg?w=901&amp;ssl=1 901w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank.jpg?resize=113%2C113&amp;ssl=1 113w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank.jpg?resize=225%2C225&amp;ssl=1 225w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank.jpg?resize=768%2C768&amp;ssl=1 768w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></p>
+<p><img loading="lazy" class="alignnone size-full wp-image-217" src="https://i2.wp.com/pitank.com/wp-content/uploads/2016/05/Cat_attack_tank.jpg?resize=800%2C800" alt="Cat_attack_tank" width="800" height="800" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank.jpg?w=901&amp;ssl=1 901w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank.jpg?resize=113%2C113&amp;ssl=1 113w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank.jpg?resize=225%2C225&amp;ssl=1 225w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/05/Cat_attack_tank.jpg?resize=768%2C768&amp;ssl=1 768w" sizes="(max-width: 800px) 100vw, 800px" data-recalc-dims="1" /></p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/debugging-pitank-cat/">Debugging PiTank with cat</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/debugging-pitank-cat/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-	<post-id xmlns="com-wordpress:feed-additions:1">216</post-id>	</item>
+					
+					<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/debugging-pitank-cat/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">216</post-id>	</item>
 		<item>
 		<title>Streaming cats via pitank</title>
 		<link>https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/</link>
-		<comments>https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/#respond</comments>
-		<pubDate>Fri, 12 Feb 2016 19:15:09 +0000</pubDate>
+					<comments>https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/#respond</comments>
+		
 		<dc:creator><![CDATA[apostal]]></dc:creator>
+		<pubDate>Fri, 12 Feb 2016 19:15:09 +0000</pubDate>
 				<category><![CDATA[PiTank]]></category>
 		<category><![CDATA[cats]]></category>
 		<category><![CDATA[pitank]]></category>
 		<category><![CDATA[raspberry pi]]></category>
 		<category><![CDATA[youtube]]></category>
-
 		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=197</guid>
-		<description><![CDATA[<p>Pitank could have a lot of practical usages.  But live is strange thing, so I basically use it to stream cat videos&#8230; When cat is left alone at home and I am somewhere far away, I just login to my pitank and start watching what is happening. Sometimes I stream it directly to youtube.  So [&#8230;]</p>
+
+					<description><![CDATA[<p>Pitank could have a lot of practical usages. &#160;But live is strange thing, so I basically use it to stream</p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/">Streaming cats via pitank</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></description>
-				<content:encoded><![CDATA[<p>Pitank could have a lot of practical usages.  But live is strange thing, so I basically use it to stream cat videos&#8230;</p>
-<p><img class="alignnone wp-image-199 size-full" src="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?resize=590%2C589&#038;ssl=1" alt="cat_stream" width="590" height="589" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?w=600&amp;ssl=1 600w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?resize=113%2C113&amp;ssl=1 113w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?resize=225%2C225&amp;ssl=1 225w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></p>
+										<content:encoded><![CDATA[<p>Pitank could have a lot of practical usages. &nbsp;But live is strange thing, so I basically use it to stream cat videos&#8230;</p>
+<p><img loading="lazy" class="alignnone wp-image-199 size-full" src="https://i2.wp.com/pitank.com/wp-content/uploads/2016/02/cat_stream.jpg?resize=600%2C599" alt="cat_stream" width="600" height="599" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?w=600&amp;ssl=1 600w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?resize=113%2C113&amp;ssl=1 113w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_stream.jpg?resize=225%2C225&amp;ssl=1 225w" sizes="(max-width: 600px) 100vw, 600px" data-recalc-dims="1" /></p>
 <p>When cat is left alone at home and I am somewhere far away, I just login to my pitank and start watching what is happening.</p>
-<p>Sometimes I stream it directly to youtube.  So here is one of the first such streaming sessions:</p>
-<p><iframe class='youtube-player' type='text/html' width='590' height='332' src='http://www.youtube.com/embed/unOWf7p8nAo?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
+<p>Sometimes I stream it directly to youtube. &nbsp;So here is one of the first such streaming sessions:</p>
+<p><iframe class='youtube-player' width='800' height='450' src='https://www.youtube.com/embed/unOWf7p8nAo?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en-US&#038;autohide=2&#038;wmode=transparent' allowfullscreen='true' style='border:0;' sandbox='allow-scripts allow-same-origin allow-popups allow-presentation'></iframe></p>
 <p>By the way streaming to youtube from Raspberry pi is as simple as one line command:</p>
 <blockquote><p>raspivid -o &#8211; -t 0 -fps 30 -b 6000000 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f h264 -i &#8211; -vcodec copy -acodec aac -ab 128k -g 50 -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/your-streaming-key</p></blockquote>
-<p>raspivid sends video stream from picamera to sdtout, it is already encoded by h264. ffmpeg puts this video stream in flv container and sends to youtube. No video encoding/decoding  happens, so it works pretty good.  Also ffmpeg emulates sound track to make stream acceptable by youtube.</p>
-<p>raspvid should be available in all recent distributions suitable for Raspberry Pi. And ffmpeg is not present on some distributions, so compiling from binaries might be required.</p>
+<p>raspivid sends video stream from picamera to sdtout, it is already encoded by h264. ffmpeg puts this video stream in flv container and sends to youtube.&nbsp;No video encoding/decoding &nbsp;happens, so it works pretty good.&nbsp; Also ffmpeg emulates sound track to make stream acceptable by youtube.</p>
+<p>raspvid should be available in all recent distributions suitable for Raspberry Pi.&nbsp;And ffmpeg is&nbsp;not present on some distributions, so compiling from binaries might be required.</p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/">Streaming cats via pitank</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-	<post-id xmlns="com-wordpress:feed-additions:1">197</post-id>	</item>
+					
+					<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/streaming-cats-via-pitank/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">197</post-id>	</item>
 		<item>
 		<title>Cat vs PiTank</title>
 		<link>https://bondar-pavel.github.io/pitank-site/cat-vs-pitank/</link>
-		<comments>https://bondar-pavel.github.io/pitank-site/cat-vs-pitank/#comments</comments>
-		<pubDate>Thu, 11 Feb 2016 13:58:37 +0000</pubDate>
+					<comments>https://bondar-pavel.github.io/pitank-site/cat-vs-pitank/#comments</comments>
+		
 		<dc:creator><![CDATA[apostal]]></dc:creator>
+		<pubDate>Thu, 11 Feb 2016 13:58:37 +0000</pubDate>
 				<category><![CDATA[PiTank]]></category>
 		<category><![CDATA[cats]]></category>
 		<category><![CDATA[pitank]]></category>
-
 		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=194</guid>
-		<description><![CDATA[<p>Checkout what happens if you leave cat and pitank in the same room.</p>
+
+					<description><![CDATA[<p>Checkout what happens if you leave cat and pitank in the same room.</p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/cat-vs-pitank/">Cat vs PiTank</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></description>
-				<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-202" src="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_vs_pitank.jpg?resize=590%2C590&#038;ssl=1" alt="cat_vs_pitank" width="590" height="590" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_vs_pitank.jpg?w=768&amp;ssl=1 768w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_vs_pitank.jpg?resize=113%2C113&amp;ssl=1 113w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_vs_pitank.jpg?resize=225%2C225&amp;ssl=1 225w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></p>
+										<content:encoded><![CDATA[<p><img loading="lazy" class="alignnone size-full wp-image-202" src="https://i1.wp.com/pitank.com/wp-content/uploads/2016/02/cat_vs_pitank.jpg?resize=768%2C768" alt="cat_vs_pitank" width="768" height="768" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_vs_pitank.jpg?w=768&amp;ssl=1 768w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_vs_pitank.jpg?resize=113%2C113&amp;ssl=1 113w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2016/02/cat_vs_pitank.jpg?resize=225%2C225&amp;ssl=1 225w" sizes="(max-width: 768px) 100vw, 768px" data-recalc-dims="1" /></p>
 <p>Checkout what happens if you leave cat and pitank in the same room.</p>
-<p><iframe class='youtube-player' type='text/html' width='590' height='332' src='http://www.youtube.com/embed/03WEtaiRABs?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
+<p><iframe class='youtube-player' width='800' height='450' src='https://www.youtube.com/embed/03WEtaiRABs?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en-US&#038;autohide=2&#038;wmode=transparent' allowfullscreen='true' style='border:0;' sandbox='allow-scripts allow-same-origin allow-popups allow-presentation'></iframe></p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/cat-vs-pitank/">Cat vs PiTank</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/cat-vs-pitank/feed/</wfw:commentRss>
-		<slash:comments>1</slash:comments>
-	<post-id xmlns="com-wordpress:feed-additions:1">194</post-id>	</item>
+					
+					<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/cat-vs-pitank/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">194</post-id>	</item>
+		<item>
+		<title>Test drive PiTank using web UI</title>
+		<link>https://bondar-pavel.github.io/pitank-site/pitank-home-test-drive/</link>
+					<comments>https://bondar-pavel.github.io/pitank-site/pitank-home-test-drive/#respond</comments>
+		
+		<dc:creator><![CDATA[apostal]]></dc:creator>
+		<pubDate>Sat, 07 Nov 2015 18:06:06 +0000</pubDate>
+				<category><![CDATA[PiTank]]></category>
+		<category><![CDATA[pitank]]></category>
+		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=162</guid>
+
+					<description><![CDATA[<p>Testdrived Raspberry Pi Tank with video streaming and controlling from web UI. In current setup PiTank uses webcam to capture</p>
+<p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/pitank-home-test-drive/">Test drive PiTank using web UI</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="https://i1.wp.com/pitank.com/wp-content/uploads/2015/11/PiTank_test_drive.jpg" class="gallery_colorbox"><img loading="lazy" class="alignnone size-full wp-image-165" src="https://i1.wp.com/pitank.com/wp-content/uploads/2015/11/PiTank_test_drive.jpg?resize=800%2C800"  alt="PiTank_test_drive" width="800" height="800" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/11/PiTank_test_drive.jpg?w=821&amp;ssl=1 821w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/11/PiTank_test_drive.jpg?resize=113%2C113&amp;ssl=1 113w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/11/PiTank_test_drive.jpg?resize=225%2C225&amp;ssl=1 225w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/11/PiTank_test_drive.jpg?resize=768%2C768&amp;ssl=1 768w" sizes="(max-width: 800px) 100vw, 800px" data-recalc-dims="1" /></a></p>
+<p>Testdrived Raspberry Pi Tank with video streaming and controlling from web UI. In current setup PiTank uses webcam to capture video and encodes video stream by mjpg-streamer. Mjpg is natively supported by all known browsers (Chrome, Firefox, IE, Opera). Tank remote control is also organized using web UI. So user is able to control tank and see streamed video on the same web page. Tank can be controlled using buttons in UI or by keyboard (&#8216;WASD&#8217;).</p>
+<p><iframe class='youtube-player' width='800' height='450' src='https://www.youtube.com/embed/5kV9DbK2nn4?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en-US&#038;autohide=2&#038;wmode=transparent' allowfullscreen='true' style='border:0;' sandbox='allow-scripts allow-same-origin allow-popups allow-presentation'></iframe></p>
+<p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/pitank-home-test-drive/">Test drive PiTank using web UI</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/pitank-home-test-drive/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">162</post-id>	</item>
 		<item>
 		<title>PiTank vs Cats! Raspberry Pi Tank outdoor test drive!</title>
 		<link>https://bondar-pavel.github.io/pitank-site/pitank_outdoor_fundrive/</link>
-		<comments>https://bondar-pavel.github.io/pitank-site/pitank_outdoor_fundrive/#respond</comments>
-		<pubDate>Fri, 09 Oct 2015 22:01:43 +0000</pubDate>
+					<comments>https://bondar-pavel.github.io/pitank-site/pitank_outdoor_fundrive/#respond</comments>
+		
 		<dc:creator><![CDATA[apostal]]></dc:creator>
+		<pubDate>Fri, 09 Oct 2015 22:01:43 +0000</pubDate>
 				<category><![CDATA[PiTank]]></category>
 		<category><![CDATA[cats]]></category>
 		<category><![CDATA[Minsk]]></category>
@@ -112,88 +195,99 @@
 		<category><![CDATA[pitank]]></category>
 		<category><![CDATA[test drive]]></category>
 		<category><![CDATA[testdrive]]></category>
-
 		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=151</guid>
-		<description><![CDATA[<p>Once upon a time PiTank project visited fresh air and met new friends. We went to the forest, drove through the city streets and turned turtle on the leaf litter. In the forest we met nice cat. I guess it was his territory, so the alien (pitank) got a lot of attention. A few words about PiTank project. PiTank &#8211; [&#8230;]</p>
+
+					<description><![CDATA[<p>Once upon a time PiTank project visited fresh air and met new friends. We went to the forest, drove through</p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/pitank_outdoor_fundrive/">PiTank vs Cats! Raspberry Pi Tank outdoor test drive!</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></description>
-				<content:encoded><![CDATA[<p>Once upon a time PiTank project visited fresh air and met new friends.</p>
-<p><a href="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/10/tank_vs_cat_square.jpg?ssl=1" class="gallery_colorbox"><img class="aligncenter wp-image-152 size-full" src="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/10/tank_vs_cat_square.jpg?resize=590%2C575&#038;ssl=1"  alt="tank_vs_cat_square" width="590" height="575" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/10/tank_vs_cat_square.jpg?w=725&amp;ssl=1 725w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/10/tank_vs_cat_square.jpg?resize=116%2C113&amp;ssl=1 116w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/10/tank_vs_cat_square.jpg?resize=231%2C225&amp;ssl=1 231w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
+										<content:encoded><![CDATA[<p>Once upon a time PiTank project visited fresh air and met new friends.</p>
+<p><a href="https://i2.wp.com/pitank.com/wp-content/uploads/2015/10/tank_vs_cat_square.jpg" class="gallery_colorbox"><img loading="lazy" class="aligncenter wp-image-152 size-full" src="https://i2.wp.com/pitank.com/wp-content/uploads/2015/10/tank_vs_cat_square.jpg?resize=725%2C706"  alt="tank_vs_cat_square" width="725" height="706" srcset="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/10/tank_vs_cat_square.jpg?w=725&amp;ssl=1 725w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/10/tank_vs_cat_square.jpg?resize=116%2C113&amp;ssl=1 116w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/10/tank_vs_cat_square.jpg?resize=231%2C225&amp;ssl=1 231w" sizes="(max-width: 725px) 100vw, 725px" data-recalc-dims="1" /></a></p>
 <p>We went to the forest, drove through the city streets and turned turtle on the leaf litter. In the forest we met nice cat. I guess it was his territory, so the alien (pitank) got a lot of attention.</p>
-<p>A few words about <a href="https://bondar-pavel.github.io/pitank-site/raspberry-pi-tank-info/">PiTank</a> project.<img class="aligncenter wp-image-88 size-large" src="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013-1024x683.jpg?resize=590%2C394&#038;ssl=1" alt="DSC_0013" width="590" height="394" srcset="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=150%2C100&amp;ssl=1 150w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=300%2C200&amp;ssl=1 300w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0013.jpg?w=1180 1180w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0013.jpg?w=1770 1770w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></p>
+<p>A few words about <a href="https://bondar-pavel.github.io/pitank-site/raspberry-pi-tank-info/">PiTank</a> project.<img loading="lazy" class="aligncenter wp-image-88 size-large" src="https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0013.jpg?resize=590%2C394" alt="DSC_0013" width="590" height="394" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=150%2C100&amp;ssl=1 150w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?w=1980&amp;ssl=1 1980w, https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0013.jpg?w=1600 1600w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></p>
 <p><a href="https://bondar-pavel.github.io/pitank-site/raspberry-pi-tank-info/">PiTank</a> &#8211; is a Raspberry Pi based remotely controllable tank. It can be controlled from web browser using keyboard or mouse. Video from camera module mounted on top of PiTank is streamed directly into the browser. Technically PiTank can be remotely controlled from any point in the world where you have internet connection.</p>
 <p>See compilation of best moments during Raspberry Pi Tank outdoor test drive in Minsk this fall.</p>
-<p><iframe class='youtube-player' type='text/html' width='590' height='332' src='http://www.youtube.com/embed/RKjUhOgZHmU?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
+<p><iframe class='youtube-player' width='800' height='450' src='https://www.youtube.com/embed/RKjUhOgZHmU?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en-US&#038;autohide=2&#038;wmode=transparent' allowfullscreen='true' style='border:0;' sandbox='allow-scripts allow-same-origin allow-popups allow-presentation'></iframe></p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/pitank_outdoor_fundrive/">PiTank vs Cats! Raspberry Pi Tank outdoor test drive!</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/pitank_outdoor_fundrive/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-	<post-id xmlns="com-wordpress:feed-additions:1">151</post-id>	</item>
+					
+					<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/pitank_outdoor_fundrive/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">151</post-id>	</item>
 		<item>
 		<title>New PiTank photos (Raspberry Pi based Tank)</title>
 		<link>https://bondar-pavel.github.io/pitank-site/new-raspberry-pi-pitank-photos/</link>
-		<comments>https://bondar-pavel.github.io/pitank-site/new-raspberry-pi-pitank-photos/#comments</comments>
-		<pubDate>Wed, 08 Jul 2015 19:31:08 +0000</pubDate>
+					<comments>https://bondar-pavel.github.io/pitank-site/new-raspberry-pi-pitank-photos/#comments</comments>
+		
 		<dc:creator><![CDATA[apostal]]></dc:creator>
+		<pubDate>Wed, 08 Jul 2015 19:31:08 +0000</pubDate>
 				<category><![CDATA[PiTank]]></category>
 		<category><![CDATA[pitank]]></category>
 		<category><![CDATA[RaspberryPi]]></category>
-
 		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=80</guid>
-		<description><![CDATA[<p>Good news, new PiTank photos are ready! It was a long way to post them, but finally we are here. Photos are taken by Nicon D5300, but I treat myself far away from professional photographer, so don&#8217;t expect too much from them. PiTank is constructed from toy tank, power bank, raspberry pi, PiCamera, wif-fi dongle and a lot [&#8230;]</p>
+
+					<description><![CDATA[<p>Good news, new PiTank photos are ready! It was a long way to post them, but finally we are here. Photos are</p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/new-raspberry-pi-pitank-photos/">New PiTank photos (Raspberry Pi based Tank)</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></description>
-				<content:encoded><![CDATA[<p>Good news, new PiTank photos are ready!</p>
+										<content:encoded><![CDATA[<p>Good news, new PiTank photos are ready!</p>
 <p>It was a long way to post them, but finally we are here. Photos are taken by Nicon D5300, but I treat myself far away from professional photographer, so don&#8217;t expect too much from them.</p>
-<p><a href="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?ssl=1" class="gallery_colorbox"><img class="aligncenter wp-image-92 size-large" src="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1-772x768.jpg?resize=590%2C587&#038;ssl=1"  alt="Raspberry Pi Tank front view" width="590" height="587" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?resize=772%2C768&amp;ssl=1 772w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?resize=114%2C113&amp;ssl=1 114w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?resize=226%2C225&amp;ssl=1 226w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?resize=768%2C764&amp;ssl=1 768w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?w=1091&amp;ssl=1 1091w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
+<p><a href="https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/title-1.jpg" class="gallery_colorbox"><img loading="lazy" class="aligncenter wp-image-92 size-large" src="https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/title-1.jpg?resize=590%2C587"  alt="Raspberry Pi Tank front view" width="590" height="587" srcset="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?resize=772%2C768&amp;ssl=1 772w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?resize=114%2C113&amp;ssl=1 114w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?resize=226%2C225&amp;ssl=1 226w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?resize=768%2C764&amp;ssl=1 768w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/title-1.jpg?w=1091&amp;ssl=1 1091w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
 <p>PiTank is constructed from toy tank, power bank, raspberry pi, PiCamera, wif-fi dongle and a lot of wires and free time.</p>
-<p><a href="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?ssl=1" class="gallery_colorbox"><img class="aligncenter wp-image-88 size-large" src="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013-1024x683.jpg?resize=590%2C394&#038;ssl=1"  alt="Raspberry Pi Tank" width="590" height="394" srcset="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=150%2C100&amp;ssl=1 150w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=300%2C200&amp;ssl=1 300w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0013.jpg?w=1180 1180w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0013.jpg?w=1770 1770w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
+<p><a href="https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0013.jpg" class="gallery_colorbox"><img loading="lazy" class="aligncenter wp-image-88 size-large" src="https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0013.jpg?resize=590%2C394"  alt="Raspberry Pi Tank" width="590" height="394" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=150%2C100&amp;ssl=1 150w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0013.jpg?w=1980&amp;ssl=1 1980w, https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0013.jpg?w=1600 1600w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
 <p>Main features is video streamin from Raspberry Pi using PiCamera and remote controlling of tank movements. Ideally you can drive this tank from any point of the planet where internet is availabe.</p>
-<p><a href="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012.jpg?ssl=1" class="gallery_colorbox"><img class="aligncenter wp-image-84 size-large" src="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012-1024x683.jpg?resize=590%2C394&#038;ssl=1"  alt="Raspberry Pi Tank on the table" width="590" height="394" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012.jpg?resize=150%2C100&amp;ssl=1 150w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012.jpg?resize=300%2C200&amp;ssl=1 300w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012.jpg?resize=768%2C512&amp;ssl=1 768w, https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0012.jpg?w=1180 1180w, https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0012.jpg?w=1770 1770w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
+<p><a href="https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0012.jpg" class="gallery_colorbox"><img loading="lazy" class="aligncenter wp-image-84 size-large" src="https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0012.jpg?resize=590%2C394"  alt="Raspberry Pi Tank on the table" width="590" height="394" srcset="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012.jpg?resize=150%2C100&amp;ssl=1 150w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012.jpg?resize=300%2C200&amp;ssl=1 300w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012.jpg?resize=768%2C512&amp;ssl=1 768w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0012.jpg?w=1980&amp;ssl=1 1980w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0012.jpg?w=1600 1600w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
 <p>PiCamera is located on top of PiTank and is can be moved in vertical direction using servo.</p>
-<p><a href="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016.jpg?ssl=1" class="gallery_colorbox"><img class="aligncenter wp-image-83 size-large" src="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016-1024x683.jpg?resize=590%2C394&#038;ssl=1"  alt="Raspberry Pi Tank on the floor" width="590" height="394" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016.jpg?resize=150%2C100&amp;ssl=1 150w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0016.jpg?w=1180 1180w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0016.jpg?w=1770 1770w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
+<p><a href="https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0016.jpg" class="gallery_colorbox"><img loading="lazy" class="aligncenter wp-image-83 size-large" src="https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0016.jpg?resize=590%2C394"  alt="Raspberry Pi Tank on the floor" width="590" height="394" srcset="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016.jpg?resize=150%2C100&amp;ssl=1 150w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016.jpg?resize=300%2C200&amp;ssl=1 300w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016.jpg?resize=768%2C512&amp;ssl=1 768w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0016.jpg?w=1980&amp;ssl=1 1980w, https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0016.jpg?w=1600 1600w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
 <p>Also tower of the tank can be moved left and right using motor build in tank. So entire construction with powerbank, Raspberry Pi and PiCamera is rotated in this case.</p>
-<p><a href="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018.jpg?ssl=1" class="gallery_colorbox"><img class="aligncenter wp-image-86 size-large" src="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018-1024x683.jpg?resize=590%2C394&#038;ssl=1"  alt="Raspberry Pi Tank on the floor, front view" width="590" height="394" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018.jpg?resize=150%2C100&amp;ssl=1 150w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0018.jpg?w=1180 1180w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0018.jpg?w=1770 1770w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
+<p><a href="https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0018.jpg" class="gallery_colorbox"><img loading="lazy" class="aligncenter wp-image-86 size-large" src="https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0018.jpg?resize=590%2C394"  alt="Raspberry Pi Tank on the floor, front view" width="590" height="394" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018.jpg?resize=150%2C100&amp;ssl=1 150w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018.jpg?resize=300%2C200&amp;ssl=1 300w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018.jpg?resize=768%2C512&amp;ssl=1 768w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0018.jpg?w=1980&amp;ssl=1 1980w, https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0018.jpg?w=1600 1600w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
 <p>Powerbank provides enough energy to work autonomously for 5-6 hours.</p>
-<p><a href="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015.jpg?ssl=1" class="gallery_colorbox"><img class="aligncenter wp-image-85 size-large" src="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015-1024x683.jpg?resize=590%2C394&#038;ssl=1"  alt="Raspberry Pi Tank" width="590" height="394" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015.jpg?resize=150%2C100&amp;ssl=1 150w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015.jpg?resize=300%2C200&amp;ssl=1 300w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015.jpg?resize=768%2C512&amp;ssl=1 768w, https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0015.jpg?w=1180 1180w, https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0015.jpg?w=1770 1770w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
+<p><a href="https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0015.jpg" class="gallery_colorbox"><img loading="lazy" class="aligncenter wp-image-85 size-large" src="https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0015.jpg?resize=590%2C394"  alt="Raspberry Pi Tank" width="590" height="394" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015.jpg?resize=150%2C100&amp;ssl=1 150w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015.jpg?resize=300%2C200&amp;ssl=1 300w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015.jpg?resize=768%2C512&amp;ssl=1 768w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0015.jpg?w=1980&amp;ssl=1 1980w, https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0015.jpg?w=1600 1600w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
 <p>Probably I need to develop some dock station so recharge powerbank(wireless one?) and increase autonomous time to unlimited.</p>
-<p><a href="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017.jpg?ssl=1" class="gallery_colorbox"><img class="aligncenter wp-image-87 size-large" src="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017-1024x683.jpg?resize=590%2C394&#038;ssl=1"  alt="Raspberry Pi Tank on the floor, front right view" width="590" height="394" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017.jpg?resize=150%2C100&amp;ssl=1 150w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0017.jpg?w=1180 1180w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0017.jpg?w=1770 1770w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
+<p><a href="https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0017.jpg" class="gallery_colorbox"><img loading="lazy" class="aligncenter wp-image-87 size-large" src="https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0017.jpg?resize=590%2C394"  alt="Raspberry Pi Tank on the floor, front right view" width="590" height="394" srcset="https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017.jpg?resize=150%2C100&amp;ssl=1 150w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017.jpg?resize=300%2C200&amp;ssl=1 300w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017.jpg?resize=768%2C512&amp;ssl=1 768w, https://i1.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0017.jpg?w=1980&amp;ssl=1 1980w, https://i2.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0017.jpg?w=1600 1600w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
 <p>And yeah, floppy cable plays main role for interconnecting PiTank hardware:)</p>
-<p><a href="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019.jpg?ssl=1" class="gallery_colorbox"><img class="aligncenter wp-image-81 size-large" src="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019-1024x683.jpg?resize=590%2C394&#038;ssl=1"  alt="Raspberry Pi Tank on the floor, rear left view" width="590" height="394" srcset="https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019.jpg?resize=150%2C100&amp;ssl=1 150w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019.jpg?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0019.jpg?w=1180 1180w, https://i0.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0019.jpg?w=1770 1770w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
+<p><a href="https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0019.jpg" class="gallery_colorbox"><img loading="lazy" class="aligncenter wp-image-81 size-large" src="https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0019.jpg?resize=590%2C394"  alt="Raspberry Pi Tank on the floor, rear left view" width="590" height="394" srcset="https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019.jpg?resize=150%2C100&amp;ssl=1 150w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019.jpg?resize=300%2C200&amp;ssl=1 300w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019.jpg?resize=768%2C512&amp;ssl=1 768w, https://i2.wp.com/storage.googleapis.com/wp-context/upload/2015/07/DSC_0019.jpg?w=1980&amp;ssl=1 1980w, https://i1.wp.com/pitank.com/wp-content/uploads/2015/07/DSC_0019.jpg?w=1600 1600w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
 <p>Hope you like it!</p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/new-raspberry-pi-pitank-photos/">New PiTank photos (Raspberry Pi based Tank)</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/new-raspberry-pi-pitank-photos/feed/</wfw:commentRss>
-		<slash:comments>1</slash:comments>
-	<post-id xmlns="com-wordpress:feed-additions:1">80</post-id>	</item>
+					
+					<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/new-raspberry-pi-pitank-photos/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">80</post-id>	</item>
 		<item>
 		<title>PiTank test drive with camera and webUI</title>
 		<link>https://bondar-pavel.github.io/pitank-site/pitank-test-drive-with-camera-and-webui/</link>
-		<comments>https://bondar-pavel.github.io/pitank-site/pitank-test-drive-with-camera-and-webui/#respond</comments>
-		<pubDate>Fri, 03 Apr 2015 19:42:57 +0000</pubDate>
+					<comments>https://bondar-pavel.github.io/pitank-site/pitank-test-drive-with-camera-and-webui/#respond</comments>
+		
 		<dc:creator><![CDATA[apostal]]></dc:creator>
+		<pubDate>Fri, 03 Apr 2015 19:42:57 +0000</pubDate>
 				<category><![CDATA[PiTank]]></category>
 		<category><![CDATA[mjpg-streamer]]></category>
 		<category><![CDATA[pitank]]></category>
 		<category><![CDATA[rack]]></category>
 		<category><![CDATA[webui]]></category>
-
 		<guid isPermaLink="false">https://bondar-pavel.github.io/pitank-site/?p=20</guid>
-		<description><![CDATA[<p>Once basic hardware was developed for tank, new features like camera and WebUI came to my mind. Also I was invited to LVEE 2014(my abstracts passed review), so I and Artem Sheremet decided to add new features for rapberry pi tank, i.e. WebUI streamin video from pitank camera and controls. See how the first test [&#8230;]</p>
+
+					<description><![CDATA[<p>Once basic hardware was developed for tank, new features like camera and WebUI came to my mind. Also I was</p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/pitank-test-drive-with-camera-and-webui/">PiTank test drive with camera and webUI</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></description>
-				<content:encoded><![CDATA[<p>Once basic hardware was developed for tank, new features like camera and WebUI came to my mind.<br />
+										<content:encoded><![CDATA[<p>Once basic hardware was developed for tank, new features like camera and WebUI came to my mind.<br />
 Also I was invited to LVEE 2014(my abstracts passed review), so I and Artem Sheremet decided to add new features for rapberry pi tank, i.e. WebUI streamin video from pitank camera and controls.<br />
 See how the first test drive looked like(pi hanged up after a minute):</p>
-<p><iframe class='youtube-player' type='text/html' width='590' height='332' src='http://www.youtube.com/embed/FPgBfh2b7IQ?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe><br />
+<p><iframe class='youtube-player' width='800' height='450' src='https://www.youtube.com/embed/FPgBfh2b7IQ?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en-US&#038;autohide=2&#038;wmode=transparent' allowfullscreen='true' style='border:0;' sandbox='allow-scripts allow-same-origin allow-popups allow-presentation'></iframe><br />
 My abstracts on LVEE:<br />
 <a title="Raspberry Pi Tank" href="http://lvee.org/ru/abstracts/112" target="_blank">http://lvee.org/ru/abstracts/112</a><br />
 And Artem&#8217;s WebUI on github:<br />
 <a title="rpi-tank-rack" href="https://github.com/dotdoom/rpi-tank-rack" target="_blank">rpi-tank-rack</a></p>
 <p>The post <a rel="nofollow" href="https://bondar-pavel.github.io/pitank-site/pitank-test-drive-with-camera-and-webui/">PiTank test drive with camera and webUI</a> appeared first on <a rel="nofollow" href="http://bondar-pavel.github.io/pitank-site/">Raspberry Pi Tanks</a>.</p>
 ]]></content:encoded>
-			<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/pitank-test-drive-with-camera-and-webui/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-	<post-id xmlns="com-wordpress:feed-additions:1">20</post-id>	</item>
+					
+					<wfw:commentRss>https://bondar-pavel.github.io/pitank-site/pitank-test-drive-with-camera-and-webui/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">20</post-id>	</item>
 	</channel>
 </rss>
