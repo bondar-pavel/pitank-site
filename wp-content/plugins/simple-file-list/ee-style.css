@@ -1,0 +1,55 @@
+#eeSFL h1, #eeSFL p {text-align: left;}
+#eeSFL form {border: 1px solid #666;-moz-border-radius: 1em;border-radius: .25em;padding: 1.5em;margin: 1em auto;}
+.eeSFLContactInfo {clear: both;padding: 20px;width: 100%;}
+#eeSFL {padding: 1em;}
+#eeSFL label {float: left;}
+#eeSFL input[type=text], #eeSFL input[type=tel], #eeSFL input[type=email], #eeSFL input[type=file], #eeSFL textarea {float: left;clear: left;width: 100%;margin-bottom: 20px;}
+#eeSFL input[type=submit] {float: right;clear: both;margin-top: 30px;}
+#eeSFL .sfl_instuctions {font-size: 70%;font-style: italic;}
+#eeSFL input::-webkit-input-placeholder {color: #ddd;font-style: italic;margin-left: 3em;}
+#eeSFL input::-moz-placeholder {color: #ddd;font-style: italic;margin-left: 3em;}
+#eeSFL input:-ms-input-placeholder {color: #ddd;font-style: italic;margin-left: 3em;}
+#eeSFL input:-moz-placeholder {color: #ddd;font-style: italic;margin-left: 3em;}
+#eeSFL table.eeFiles {width: 100%;border-collapse: collapse;border: 1px solid #999;text-align: center;}
+#eeSFL .eeFiles tr:hover {background: #fff;}
+#eeSFL .eeFiles th {text-align: center;background: #555;color: #eee;}
+#eeSFL .eeFiles td {padding: .25em 0;border-bottom: 1px solid #999;text-overflow: clip;overflow: hidden;}
+#eeSFL .eeFiles td a {display: block;width: 100%;height: auto;text-decoration: none;}
+#eeSFL input[type=file] {float: left;margin-right: 2em;font-size: 120%;}
+#eeSFL .eeUploadButton {float: left;}
+#eeSFL #eeUploadingNow {display: none;}
+#eeSFL #eeUploadingNow img {margin-right: 1em;}
+.eeSFL_Admin {width: 60%;min-width: 600px;float: left;font-size: 120%;}
+.eeSFL_Admin h2, .eeSFL_Admin h3 {clear: left;width: 75%;}
+.eeSFL_Tabs h4 {width: 58%;text-align: right;}
+.eeActiveTab {background: #54595f;color: #fff;}
+.eeSFL_Admin .eeAlignRight {float: right;margin: 0 1em 1em 0;}
+.eeSFL_Admin .eeAlignLeftTwoThirds {float: left;width: 66%;}
+.eeSFL_Admin fieldset {display: block;position: relative;clear: both;border: 2px solid #ddd;padding: 1em;margin: 1em;background-color: #f4f4f4;}
+.eeSFL_Admin label, .eeSFL_Admin span {float: left;clear: left;width: 25%;text-align: right;margin-right: .5em;padding: 5px;margin-bottom: 1em;background: #ddd;}
+.eeSFL_Admin .eeRadioLabel {clear: none;width: auto;background: transparent;}
+.eeSFL_Admin select, .eeSFL_Admin input[type=text], .eeSFL_Admin input[type=url], .eeSFL_Admin input[type=password], .eeSFL_Admin input[type=tel], .eeSFL_Admin input[type=email], .eeSFL_Admin textarea, .eeSFL_Admin span.eeValueDisplay {float: left;width: 65%;padding: 4px;}
+.eeSFL_Admin textarea {margin-bottom: 10px;}
+.eeSFL_Admin input[type=radio] {float: left;width: 1.2em;height: 1.2em;display: inline-block;margin-top: .325em;margin-right: 2em;}
+#eeSFL_Settings input[type=checkbox] {float: left;width: 1.4em;height: 1.4em;display: inline-block;margin-top: .325em;margin-right: .5em;}
+.eeSFL_Admin input[type=submit], .eeSFL_Admin button {font-size: 130%;margin-bottom: .5em;}
+.eeSFL_Admin p {margin: 0;margin-top: .325em;}
+#eeSFL p.sfl_instuctions {float: right;text-align: right;width: 50%;}
+.eeNote {float: left;clear: both;margin-bottom: 30px;}
+.eeAlert {float: right;font-size: 125%;color: red;background-color: #ddd;margin: 20px;padding: 4px;}
+.eeClearFix {clear: both;}
+.eeBacklink {display: block;text-align: center;font-size: 70%;}
+.eeSupp {display: block;clear: both;border: 2px solid #ddd;padding: 1em;margin: 1em;width: 60%;}
+.eeSupp .eeSupp {width: auto;}
+.eeSupp h2 {font-size: 150%;}
+.eeSupp h3 {font-size: 120%;font-style: italic;}
+.eeSupp p {font-size: 100%;margin-bottom: 2em;}
+.eeSupp input[type=text], .eeSupp input[type=email], .eeSupp input[type=url], .eeSupp textarea {float: left;max-width: 50%;font-size: 120%;}
+.eeSupp textarea {height: 300px;}
+.eeSupp label {float: left;clear: left;width: 25%;text-align: right;margin-right: 1%;padding: 5px;margin-bottom: 1em;background: #ddd;font-size: 110%;}
+.eeSupp #eeSupportFormSubmit {font-size: 200%;display: block;margin: 0 auto;margin-bottom: 30px;}
+.eeSupp strong {font-size: 120%;}
+#eeSupportBanner {width: 300px;height: auto;padding: 5px;margin: 5px;border: 1px solid #ddd;}
+#eeAdminFooter {clear: both;padding-top: 100px;}
+.eeNoClear {clear: none !important;width: auto !important;}
+.eeRight {float: right;}
